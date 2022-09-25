@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIN</title>
+    <style> 
+        *{
+          padding: 0;
+          margin:0;
+          font-family: sans-serif;
+      }
+      .signin-body{
+          
+          background-size: cover;
+          background-color: rgb(14, 147, 243);
+          
+      }
+      .signin-form{
+          width: 350px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% , -50%);
+          position:absolute;
+          color: #e6001f;
+          font-style: italic;
+      }
+      .signin-form h1{
+          font-size: 40px;
+          text-align: center;
+          text-transform:uppercase;
+          margin:40px 0;
+      
+      }
+      .signin-form label{
+        font-weight: bold;
+      font-size:20px;
+      margin:15px 0;
+      
+      }
+      .signin-form input{
+
+          font-size: 16px;
+          width:100%;
+          padding: 15px 10px;
+          border:0;
+          outline:none;
+          border-radius: 5px;
+      }
+      
+      .signin-form button{
+          font-size: 18px;
+          font-weight: bold;
+          margin:20px 0;
+          padding: 10px 15px;
+          width:50%;
+          border-radius: 5px;
+          border:0;
+      }
+      </style>
+    
+</head>
+<body>
+    <div class="signin-form">
+    <form action="signin" method="post">
+        
+        {% csrf_token %}
+        <label>First Name</label>
+        <input type="text" name="fname">
+        <br>
+        <label>Last Name</label>
+        <input type="text" name="lname">
+        <br>
+        <label>User Name</label>
+        <input type="text" name="uname">
+        <br>
+        <label>email</label>
+        <input type="email" name="email">
+        <br>
+        <label>Password</label>
+        <input type="password" name="pwd">
+        <br>
+        <input type="submit">
+
+    </form>
+    </div>
+</body>
+</html>
